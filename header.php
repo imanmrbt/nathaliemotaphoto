@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nathalie Mota Photo</title>
+    <?php wp_head();?>
+</head>
+<body>
+
+
+
 <header>
 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Logo-1.png" alt="logo">
 <nav id="navigation">
@@ -6,7 +19,7 @@
 
 <div class="form-popup" id="myForm"> 
     <div class= "form-header">
- 
+ <button id ="btn">X</button>
   </div>
   <form action="/action_page.php" class="form-container">
  
@@ -22,7 +35,8 @@
     <label for="message"><b>Message</b></label>
     <input type="message" class ="message" placeholder="message" name="message">
 
-    <button type="submit" class="btn"onclick="closeForm()">Envoyer</button>
+    <button type="submit" class="btn">Envoyer</button>
+    
   </form>
 </div>
 </header>

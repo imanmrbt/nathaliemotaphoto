@@ -1,12 +1,3 @@
-<!doctype html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title><?php wp_title(''); ?></title>
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
-</head>
-<body>
-
 <?php get_header(); ?>
 	<main id="primary" class="site-main">
 <h1 class="wp-block-heading" id="accueilh1">PHOTOGRAPHE EVENT</h1>
@@ -39,22 +30,22 @@
 </div>
 
 <div class="galerie">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-0.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-1.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-2.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-3.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-4.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-5.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-6.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-7.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-8.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-9.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-10.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-11.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-12.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-13.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-14.jpeg'?>">
-<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-15.jpeg'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-0.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-1.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-2.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-3.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-4.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-5.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-6.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-7.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-8.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-9.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-10.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-11.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-12.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-13.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-14.webp'?>">
+<img src = "<?php echo get_template_directory_uri() . '/assets/images/nathalie-15.webp'?>">
 </div>
 
 <?php get_footer(); ?>

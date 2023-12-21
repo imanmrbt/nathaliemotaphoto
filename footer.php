@@ -3,5 +3,6 @@
     <a src="#">vie privée</a>
     <a src="#">tous droits reservés</a>
 </footer>
-    </body>
+<?php wp_footer();?>
+</body>
 </html>
