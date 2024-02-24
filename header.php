@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  
   <title>Nathalie Mota Photo</title>
     <?php wp_head();?>
 </head>
@@ -30,7 +31,7 @@
     <input type="text" placeholder="Enter Email" name="email" required>
 
     <label for="ref"><b>Ref. Photo</b></label>
-    <input type="text" placeholder="Ref photo" name="ref">
+    <input type="text" placeholder="Ref photo" value=" <?php the_field('reference') ;?>" name="ref">
 
     <label for="message"><b>Message</b></label>
     <input type="message" class ="message" placeholder="message" name="message">

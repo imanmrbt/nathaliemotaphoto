@@ -14,7 +14,12 @@
 			?>
 		<?php endif; ?>
 		<?php echo 'reference: reference'?><br>
-        <?php echo 'catégorie:'; $cat = get_the_category(); echo $cat[0]->cat_name;?><br>
+        <?php $categorie = 'categorie';
+                $terms = get_the_terms(get_the_ID(), $categorie);
+                echo 'Catégorie : ';
+                foreach ($terms as $term) {
+                    echo esc_html($term->name);
+                }?><br>
 		<?php $format = 'format';
                 $terms = get_the_terms(get_the_ID(), $format);
                 echo 'Format : ';
@@ -22,7 +27,7 @@
                     echo esc_html($term->name);
                 }
             ?><br>
-		 <?php $taxonomy = 'camera_type'; // Remplacez par le nom de la taxonomie que vous souhaitez afficher
+		 <?php $taxonomy = 'camera_type'; 
                 $terms = get_the_terms(get_the_ID(), $taxonomy);
                 echo 'types : ';
                 foreach ($terms as $term) {
@@ -37,16 +42,9 @@
 	</div>
      
 	<div class="photo-post-2">
-<img class= "photo-post-image" src  = "<?php echo the_post_thumbnail_url()?>">
-
+<img class= "photo-post-image" src  = "<?php echo the_post_thumbnail_url()?>">     
     </div>
-
-<div class="photo-post-3">
-    <?php echo get_previous_post_link() ?>
-    <?php echo get_next_post_link() ?>
-<!-- fleche <a href= et photo en hover -->
-
-	<script>
+    <script>
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 };
@@ -55,13 +53,41 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 </script>
+<div class="photo-post-3">
 <p>Cette photo vous intéresse ?</p>
 <button onclick="openForm()">contact</button>
-</div>
-<div>Vous aimerez AUSSI</div>
 
-</article>
-        <?php get_template_part('section','content'); ?>
+<?php
+            $previous_post = get_previous_post();
+            $next_post = get_next_post();
+
+            if($next_post){
+                echo '<div class="nav">'.get_the_post_thumbnail($next_post->ID,'thumbnail').
+                '<span id="nav"><a href="'.get_permalink($previous_post).'"><img src = "'.get_template_directory_uri() . '/assets/images/prev.png"></a>
+                <a href="'. get_permalink($next_post).'"><img src = "'.get_template_directory_uri() . '/assets/images/next.png"></a></span></div>';
+            };
+            if(!$next_post){
+                echo '<div class="nav">'.get_the_post_thumbnail($previous_post->ID,'thumbnail').
+                '<span id="nav"><a href="'.get_permalink($previous_post).'"><img src = "'.get_template_directory_uri() . '/assets/images/prev.png"></a>
+                <a href="'. get_permalink($next_post).'"><img src = "'.get_template_directory_uri() . '/assets/images/next.png"></a></span></div>';
+            };?>
     </div>
+
+    <div class="galerie">
+<?php 
+
+  $photos = new WP_Query([
+    'post_type' => 'photo',
+    'posts_per_page' => 2 ,
+    'orderby'=>'rand',
+  ]);
+
+    if($photos->have_posts()): 
+      while($photos->have_posts()) : $photos->the_post();
+        echo get_template_part('template-parts/galerie');
+    	endwhile;
+        wp_reset_postdata();
+    endif; ?>
+</div></div>
+
 <?php get_footer(); ?>
- 
