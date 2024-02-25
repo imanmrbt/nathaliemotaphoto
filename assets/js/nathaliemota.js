@@ -15,7 +15,15 @@ const popupclose = document.getElementById('btn');
     document.getElementById("myForm").style.display = "none";
 });
 
+/***********burger*******************************************************************/
+var burgerMenu = document.getElementById('burger-menu');
 
+var overlay = document.getElementById('navigation');
+
+burgerMenu.addEventListener('click', function() {
+this.classList.toggle("close");
+overlay.classList.toggle("overlay");
+});
 /**lightbox****************************************************************************/
 
   }

@@ -13,7 +13,8 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 		<?php endif; ?>
-		<?php echo 'reference: reference'?><br>
+        référence: 
+		<?php echo the_field('reference');?><br>
         <?php $categorie = 'categorie';
                 $terms = get_the_terms(get_the_ID(), $categorie);
                 echo 'Catégorie : ';
@@ -36,9 +37,7 @@
             ?><br>
         <?php echo 'date:' . get_the_date();
 		?>
-        	
-
-
+        
 	</div>
      
 	<div class="photo-post-2">
@@ -76,10 +75,12 @@ function closeForm() {
     <div class="galerie">
 <?php 
 
+
   $photos = new WP_Query([
     'post_type' => 'photo',
     'posts_per_page' => 2 ,
-    'orderby'=>'rand',
+    'order'=>'asc',
+    'orderby'=>'date',
   ]);
 
     if($photos->have_posts()): 

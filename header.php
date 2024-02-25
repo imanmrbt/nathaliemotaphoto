@@ -13,11 +13,24 @@
 
 
 <header>
-<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Logo-1.png" alt="logo">
+<a href="<?php echo home_url();?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Logo-1.png" alt="logo"></a>
+<div id="burger-menu">
+<span id="lines"></span>
 <nav id="navigation">
    <?php wp_nav_menu(array('theme_location' => 'main')); ?>
 </nav>
+</div>
+<!--------------------BURGER MENU---------------------------------------
 
+
+            
+        <span id="lines"></span> 
+</div>
+
+<nav id="burger-navigation">
+</nav>-->
+
+<!--------------------CONTACT POPUP------------------------------------->
 <div class="form-popup" id="myForm"> 
     <div class= "form-header">
  <button id ="btn">X</button>

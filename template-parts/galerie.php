@@ -1,6 +1,6 @@
 
 <div class="front-galerie">
-<div class="galerie1"><?php the_post_thumbnail();?></div>
+<div class="galerie1"><a class="smallscreen" href="<?php the_permalink()?>"><?php the_post_thumbnail();?></a></div>
 <div class="galerie2 hover">
     <!--ouvre lightbox-->
     <a href="#<?php the_ID(); ?>"onclick="document.getElementById('<?php the_ID(); ?>').style.display='flex'"><img class="fullscreen"  src = "<?php echo get_template_directory_uri() . '/assets/images/icon_fullscreen.png'?>"></a>
